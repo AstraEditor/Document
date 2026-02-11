@@ -1,0 +1,14 @@
+:root > * {
+    /* Primary color shades */
+    --md-primary-fg-color:               #0099ff;
+    --md-primary-fg-color--light:        #40b0ff;
+    --md-primary-fg-color--dark:         #007acc;
+    --md-primary-bg-color:               #ffffff;
+    --md-primary-bg-color--light:        #cccccc;
+  
+    /* Accent color shades */
+    --md-accent-fg-color:                #0099ff;
+    --md-accent-fg-color--transparent:   #40b0ff;
+    --md-accent-bg-color:                #ffffff;
+    --md-accent-bg-color--light:         #c9c9c9;
+}
