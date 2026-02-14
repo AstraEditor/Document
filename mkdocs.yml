@@ -56,7 +56,7 @@ nav:
       - 保持兼容: development/extensions/compatibility.md
       - 分享你的扩展: development/extensions/share.md
       - 结尾: development/extensions/wrapping-up.md
-    - 模组介绍: development/getting-started.md
+    - Mod 介绍: development/getting-started.md
     - 全局变量: development/globals.md
     - Scratch X & TurboWarp: development/scratchx.md
   - 博客:

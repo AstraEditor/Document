@@ -5,7 +5,7 @@ title: 嵌入
 # 嵌入
 
 !!! info "信息"
-    这个页面是关于[TurboWarp 打包器](https://turbowarp.org/)的。如果你只想知道如何嵌入Scratch作品到网站，查看[另一个嵌入页面](/website/embedding/).
+    这个页面是关于[TurboWarp 打包器](https://turbowarp.org/)的。如果你只想知道如何嵌入 Scratch 作品到网站，查看[另一个嵌入页面](/website/embedding/).
 
 
 You can embed the output of the TurboWarp Packager into another website:

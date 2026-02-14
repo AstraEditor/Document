@@ -24,7 +24,7 @@
     
     
       
-        <title>URL参数 - AstraEditor Document</title>
+        <title>URL 参数 - AstraEditor Document</title>
       
     
     
@@ -125,7 +125,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#url-parameters" class="md-skip">
+        <a href="#url" class="md-skip">
           跳转至
         </a>
       
@@ -175,7 +175,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              URL参数
+              URL 参数
             
           </span>
         </div>
@@ -937,9 +937,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#only-hidden-url-parameters-are-listed-here" class="md-nav__link">
+  <a href="#url_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Only "hidden" URL parameters are listed here
+      这里只有“隐藏”的 URL 参数
     </span>
   </a>
   
@@ -957,7 +957,7 @@
         <li class="md-nav__item">
   <a href="#cloud_host" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloud host
+      云主机
     </span>
   </a>
   
@@ -966,7 +966,7 @@
         <li class="md-nav__item">
   <a href="#extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom extensions
+      自定义扩展
     </span>
   </a>
   
@@ -975,7 +975,7 @@
         <li class="md-nav__item">
   <a href="#nocompile" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable compiler
+      禁用编译器
     </span>
   </a>
   
@@ -984,7 +984,7 @@
         <li class="md-nav__item">
   <a href="#project_url" class="md-nav__link">
     <span class="md-ellipsis">
-      Project URL
+      作品 URL
     </span>
   </a>
   
@@ -1257,9 +1257,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#only-hidden-url-parameters-are-listed-here" class="md-nav__link">
+  <a href="#url_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Only "hidden" URL parameters are listed here
+      这里只有“隐藏”的 URL 参数
     </span>
   </a>
   
@@ -1277,7 +1277,7 @@
         <li class="md-nav__item">
   <a href="#cloud_host" class="md-nav__link">
     <span class="md-ellipsis">
-      Cloud host
+      云主机
     </span>
   </a>
   
@@ -1286,7 +1286,7 @@
         <li class="md-nav__item">
   <a href="#extension" class="md-nav__link">
     <span class="md-ellipsis">
-      Custom extensions
+      自定义扩展
     </span>
   </a>
   
@@ -1295,7 +1295,7 @@
         <li class="md-nav__item">
   <a href="#nocompile" class="md-nav__link">
     <span class="md-ellipsis">
-      Disable compiler
+      禁用编译器
     </span>
   </a>
   
@@ -1304,7 +1304,7 @@
         <li class="md-nav__item">
   <a href="#project_url" class="md-nav__link">
     <span class="md-ellipsis">
-      Project URL
+      作品 URL
     </span>
   </a>
   
@@ -1342,37 +1342,42 @@
   
 
 
-<h1 id="url-parameters">URL Parameters</h1>
-<p>:::note</p>
-<h2 id="only-hidden-url-parameters-are-listed-here">Only "hidden" URL parameters are listed here</h2>
-<p>TurboWarp will automatically store settings such as turbo mode, 60 FPS, high quality pen, etc. in the URL, but some advanced options still need to be manually applied. This page only documents these advanced options.
-:::</p>
+<h1 id="url">URL 参数</h1>
+<div class="admonition note">
+<p class="admonition-title">注释</p>
+<h2 id="url_1">这里只有“隐藏”的 URL 参数</h2>
+<p>TurboWarp 会自动存储加速模式、60 FPS、高清画笔等设置，但一些高级选项仍需手动应用，此页面仅记录这些高级选项。</p>
+</div>
 <h2 id="username">Username</h2>
-<p>The <code>username</code> option controls the value of the username block.</p>
+<p><code>username</code>参数用于控制<code>用户名</code>块返回的值。</p>
 <p>https://turbowarp.org/443603478?username=ExampleUsername</p>
-<h2 id="cloud_host">Cloud host</h2>
-<p>The <code>cloud_host</code> option lets you change the cloud variable server that TurboWarp will connect to, for example:</p>
+<h2 id="cloud_host">云主机</h2>
+<p><code>cloud_host</code>参数用于设置 TurboWarp 要连接的云变量服务器，例如：</p>
 <p>https://turbowarp.org/12785898?cloud_host=wss://clouddata.turbowarp.org</p>
-<p>Inclusion of <code>ws://</code> or <code>wss://</code> is optional but recommended. <code>wss://clouddata.turbowarp.org</code> is the default cloud data server used by TurboWarp, so this example doesn't actually change anything. Insecure ws:// servers may not work because TurboWarp uses HTTPS.</p>
-<p>It is not possible to use this to connect to Scratch's cloud variable server as it requires account credentials which TurboWarp can't support.</p>
-<h2 id="extension">Custom extensions</h2>
-<p>The <code>extension</code> option loads a custom extension from a URL. See <a href="/development/custom-extensions">Custom Extensions</a>.</p>
-<!-- Commented due to possible removal -->
+<p><code>ws://</code>或<code>wss://</code>的协议是可选的，但我们建议您这样加上它。<code>wss://clouddata.turbowarp.org</code>是 TurboWarp 默认使用的云变量服务器，因此这个示例实际上并不会改变任何内容。不安全的 ws:// 服务器可能无法正常工作，因为 TurboWarp 使用的是 HTTPS 协议。</p>
+<p>TurboWarp 不支持连接到 Scratch 的云服务器，因为它需要验证用户凭证。</p>
+<h2 id="extension">自定义扩展</h2>
+<p><code>extension</code>参数从一个 URL 加载自定义扩展。详见<a href="/development/custom-extensions.md">自定义扩展</a>。</p>
+<!-- 因可能存在被删除的情况而注释掉 -->
 <!--
 ## `scale` {#scale}
 
-Controls the maximum relative scale of the player when in fullscreen mode.
+控制全屏模式下玩家的最大相对缩放比例。
 
 https://turbowarp.org/fullscreen?scale=2
 -->
 
-<h2 id="nocompile">Disable compiler</h2>
-<p>The <code>nocompile</code> option turns off the compiler. You probably shouldn't enable this.</p>
+<h2 id="nocompile">禁用编译器</h2>
+<p><code>nocompile</code>参数用于关闭编译器。除非你知道自己在做什么，否则请不要加上这个参数。</p>
 <p>https://turbowarp.org/?nocompile</p>
-<h2 id="project_url">Project URL</h2>
-<p>The <code>project_url</code> option tells TurboWarp to download project data from an arbitrary URL. Do not use together with a regular project ID.</p>
+<h2 id="project_url">作品 URL</h2>
+<div class="admonition warning inline end">
+<p class="admonition-title">注意啦！</p>
+<p>这需要一个 .sb3 文件下载直链！</p>
+</div>
+<p><code>project_url</code>参数让 TurboWarp 从任意一个 URL 下载 Scratch 作品，请勿将其与常规 Scratch 网站的作品 ID 一起使用。</p>
 <p>https://turbowarp.org/?project_url=packager.turbowarp.org/example.sb3</p>
-<p>https:// is implied if you don't include a protocol. http:// URLs generally will not work for security reasons. Note that the URL needs to be a direct download and must support CORS (<code>Access-Control-Allow-Origin: *</code>). <a href="https://pages.github.com/">GitHub Pages</a> will do this automatically and is known to work well.</p>
+<p>如果未指定协议，则默认使用“https”。通常 http:// 协议的 URL 出于安全原因无法使用。请注意，该 URL 需要是下载直链，并且必须支持 CORS（<code>Access-Control-Allow-Origin： *</code>）。<a href="https://pages.github.com/">GitHub Pages</a> 会自动完成此操作，并且已知运行良好。</p>
 
 
 
@@ -1393,12 +1398,13 @@ https://turbowarp.org/fullscreen?scale=2
   <span class="md-source-file__fact">
     <span class="md-icon" title="贡献者">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:3091949883@qq.com">Cyberexplorer</a>
+        <a href="mailto:3091949883@qq.com">Cyberexplorer</a>, 
+        <a href="mailto:not.committed.yet">Not Committed Yet</a>
     </nav>
   </span>
 

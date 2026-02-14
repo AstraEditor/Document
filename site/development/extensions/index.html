@@ -24,7 +24,7 @@
     
     
       
-        <title>介绍 - AstraEditor Document</title>
+        <title>介绍自定义扩展 - AstraEditor Document</title>
       
     
     
@@ -125,7 +125,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction-to-custom-extensions" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -175,7 +175,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              介绍
+              介绍自定义扩展
             
           </span>
         </div>
@@ -1056,7 +1056,7 @@
   
   
   <span class="md-ellipsis">
-    模组介绍
+    Mod 介绍
     
   </span>
   
@@ -1203,18 +1203,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#compatibility" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Compatibility
+      兼容性
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      预备知识
     </span>
   </a>
   
@@ -1303,48 +1303,49 @@
   
 
 
-<h1 id="introduction-to-custom-extensions">Introduction to custom extensions</h1>
-<p>Custom extensions are a way for you to add new blocks to TurboWarp using JavaScript.</p>
-<p>In this tutorial, we will describe how to build custom extensions. The pages can be navigated using the sidebar or links at the bottom of each page. We assume that you read each page in full and do the exercises listed (if any) before going to the next page.</p>
-<p>:::info
-<strong>We just rewrote this entire tutorial from the ground up.</strong></p>
-<p>It uses a completely different structure and style. We hope it's easier to follow. There's a good chance there are some errors and omissions in this tutorial. <a href="https://scratch.mit.edu/users/GarboMuffin/#comments">Let me know what you think</a>. Thanks!
-:::</p>
-<p>When people refer to "extensions", there are a few things they could be referring to:</p>
+<h1 id="_1">介绍自定义扩展</h1>
+<p>自定义扩展是一种通过使用 JavaScript 在 TurboWarp 中添加新积木的方法。</p>
+<p>在本教程中，我们将介绍如何创建一个自定义扩展。这些页面可以通过侧边栏或每页底部的链接进行导航。我们假设您会完整阅读每个页面，并在进入下一页之前完成列出的练习（如果有）。</p>
+<div class="admonition info">
+<p class="admonition-title">信息</p>
+<p><strong>我们刚刚彻底重写了这份完整的教程。</strong></p>
+<p>它采用了完全不同的结构和风格，我们希望这样会更易于理解。不过，这个教程仍可能存在一些错误和遗漏之处。<a href="https://scratch.mit.edu/users/GarboMuffin/#comments">请告诉我您的看法</a>，谢谢！</p>
+</div>
+<p>当人们提到“扩展”时，他们所指的可能有以下几种情况：</p>
 <table>
 <thead>
 <tr>
 <th style="text-align: center;"></th>
-<th style="text-align: center;">Can access Scratch internals</th>
-<th style="text-align: center;">Can be loaded by URL</th>
+<th style="text-align: center;">能够访问 Scratch 内部结构</th>
+<th style="text-align: center;">能够通过 URL 加载</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: center;">Core extensions (pen, translate, etc.)</td>
+<td style="text-align: center;">原版核心扩展（画笔、翻译等）</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 </tr>
 <tr>
-<td style="text-align: center;">Sandboxed custom extensions</td>
+<td style="text-align: center;">沙盒·自定义扩展</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 </tr>
 <tr>
-<td style="text-align: center;">Unsandboxed custom extensions</td>
+<td style="text-align: center;">非沙盒·自定义扩展</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
-<p>The documentation in these segments refers only to custom extensions. While core extensions share many fundamentals, the process of developing them is significantly different. See <a href="../getting-started">getting started</a> as a starting point for building core extensions.</p>
-<p>We will discuss the difference between sandboxed and unsandboxed extensions at <a href="./unsandboxed">a later time</a>.</p>
-<h2 id="compatibility">Compatibility</h2>
-<p>Custom extensions are not compatible with Scratch. Projects made using custom extensions cannot be uploaded to the Scratch website. They can, however, be packaged using the <a href="https://packager.turbowarp.org/">TurboWarp Packager</a>.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<p>Custom extension development requires knowledge of writing JavaScript. If you aren't familiar with JavaScript, please learn it first. Your favorite search engine can help you find places to learn. If you don't know things like the difference between <code>"1"</code> and <code>1</code>, developing extensions will be very difficult. As volunteers, we don't have a lot of time to spend helping you learn JavaScript -- sorry.</p>
-<p>Extensions can be developed using either the website or desktop app.</p>
-<p>We assume that you have access to the developer tools built in to your browser or the desktop app. Typically this is accessible through right click &gt; inspect element. In the desktop app, it can be shown with Ctrl+Shift+I (Option+Command+I on macOS). Writing JavaScript without access to the developer tools is extremely painful and not something we can provide help for.</p>
+<p>这些部分中的文档仅涉及自定义扩展。虽然核心扩展有许多共同的特性，但开发它们的过程却大不相同。请参考<a href="../getting-started/">快速入门</a>作为构建核心扩展的起点。</p>
+<p>我们将<a href="unsandboxed/">在稍后</a>讨论沙盒扩展与非沙盒扩展之间的区别。</p>
+<h2 id="_2">兼容性</h2>
+<p>自定义扩展与 Scratch 不兼容，使用自定义扩展的作品无法上传至 Scratch 网站。不过，这些作品可以通过 <a href="https://packager.turbowarp.org/">TurboWarp 打包器</a> 进行打包。</p>
+<h2 id="_3">预备知识</h2>
+<p>自定义扩展的开发需要具备编写 JavaScript 的知识。如果您还不会 JavaScript，请先学习它。您最常用的搜索引擎可以帮助您找到学习的相关资源。如果您不了解诸如<code>“1”</code>和 <code>1</code> 之间的区别这类内容，那么开发扩展程序将会非常困难。作为志愿者，我们没有太多时间来帮助您学习 JavaScript —— 为此，我们感到抱歉。</p>
+<p>扩展可以通过网站或桌面应用来开发。</p>
+<p>我们假定您会用浏览器或桌面应用内置的开发者工具。通常，可以通过右键点击 &gt; 检查元素来打开该界面。在桌面应用中，可以通过按 Ctrl+Shift+I（在 macOS 系统上为 Option+Command+I）来打开该界面。如果无法借助开发者来编写 JavaScript 代码，那将会非常麻烦，我们也无法提供帮助。</p>
 <h2 id="tutorial-structure">Tutorial structure</h2>
 <p>This tutorial is follows a fundamentals-up approach. We're going to start with the most basic extensions imaginable that are effectively useless and gradually build up to things that are more useful.</p>
 <p>We know that some of you will be eager to start sharing your extensions around, but <strong>we ask that you read through this whole tutorial before publishing your extensions or submitting them to us</strong> so that the extensions you share are actually useful.</p>
@@ -1383,12 +1384,13 @@
   <span class="md-source-file__fact">
     <span class="md-icon" title="贡献者">
       
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4a4 4 0 0 1 4 4 4 4 0 0 1-4 4 4 4 0 0 1-4-4 4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
       
     </span>
     <nav>
       
-        <a href="mailto:3091949883@qq.com">Cyberexplorer</a>
+        <a href="mailto:3091949883@qq.com">Cyberexplorer</a>, 
+        <a href="mailto:not.committed.yet">Not Committed Yet</a>
     </nav>
   </span>
 

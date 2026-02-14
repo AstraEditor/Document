@@ -1,56 +1,57 @@
 ---
-slug: /url-parameters
-hide_table_of_contents: true
+title: URL 参数
 ---
 
-# URL Parameters
+# URL 参数
 
 
-:::note
-## Only "hidden" URL parameters are listed here {#only-hidden-url-parameters-are-listed-here}
-TurboWarp will automatically store settings such as turbo mode, 60 FPS, high quality pen, etc. in the URL, but some advanced options still need to be manually applied. This page only documents these advanced options.
-:::
+!!! note "注释"
+    ## 这里只有“隐藏”的 URL 参数
+    TurboWarp 会自动存储加速模式、60 FPS、高清画笔等设置，但一些高级选项仍需手动应用，此页面仅记录这些高级选项。
 
 
 ## Username {#username}
 
-The `username` option controls the value of the username block.
+`username`参数用于控制`用户名`块返回的值。
 
 https://turbowarp.org/443603478?username=ExampleUsername
 
-## Cloud host {#cloud_host}
+## 云主机 {#cloud_host}
 
-The `cloud_host` option lets you change the cloud variable server that TurboWarp will connect to, for example:
+`cloud_host`参数用于设置 TurboWarp 要连接的云变量服务器，例如：
 
 https://turbowarp.org/12785898?cloud_host=wss://clouddata.turbowarp.org
 
-Inclusion of `ws://` or `wss://` is optional but recommended. `wss://clouddata.turbowarp.org` is the default cloud data server used by TurboWarp, so this example doesn't actually change anything. Insecure ws:// servers may not work because TurboWarp uses HTTPS.
+`ws://`或`wss://`的协议是可选的，但我们建议您这样加上它。`wss://clouddata.turbowarp.org`是 TurboWarp 默认使用的云变量服务器，因此这个示例实际上并不会改变任何内容。不安全的 ws:// 服务器可能无法正常工作，因为 TurboWarp 使用的是 HTTPS 协议。
 
-It is not possible to use this to connect to Scratch's cloud variable server as it requires account credentials which TurboWarp can't support.
+TurboWarp 不支持连接到 Scratch 的云服务器，因为它需要验证用户凭证。
 
-## Custom extensions {#extension}
+## 自定义扩展 {#extension}
 
-The `extension` option loads a custom extension from a URL. See [Custom Extensions](/development/custom-extensions).
+`extension`参数从一个 URL 加载自定义扩展。详见[自定义扩展](/development/custom-extensions.md)。
 
-<!-- Commented due to possible removal -->
+<!-- 因可能存在被删除的情况而注释掉 -->
 <!--
 ## `scale` {#scale}
 
-Controls the maximum relative scale of the player when in fullscreen mode.
+控制全屏模式下玩家的最大相对缩放比例。
 
 https://turbowarp.org/fullscreen?scale=2
 -->
 
-## Disable compiler {#nocompile}
+## 禁用编译器 {#nocompile}
 
-The `nocompile` option turns off the compiler. You probably shouldn't enable this.
+`nocompile`参数用于关闭编译器。除非你知道自己在做什么，否则请不要加上这个参数。
 
 https://turbowarp.org/?nocompile
 
-## Project URL {#project_url}
+## 作品 URL {#project_url}
 
-The `project_url` option tells TurboWarp to download project data from an arbitrary URL. Do not use together with a regular project ID.
+!!! warning inline end "注意啦！"
+    这需要一个 .sb3 文件下载直链！
+
+`project_url`参数让 TurboWarp 从任意一个 URL 下载 Scratch 作品，请勿将其与常规 Scratch 网站的作品 ID 一起使用。
 
 https://turbowarp.org/?project_url=packager.turbowarp.org/example.sb3
 
-https:// is implied if you don't include a protocol. http:// URLs generally will not work for security reasons. Note that the URL needs to be a direct download and must support CORS (`Access-Control-Allow-Origin: *`). [GitHub Pages](https://pages.github.com/) will do this automatically and is known to work well.
+如果未指定协议，则默认使用“https”。通常 http:// 协议的 URL 出于安全原因无法使用。请注意，该 URL 需要是下载直链，并且必须支持 CORS（`Access-Control-Allow-Origin： *`）。[GitHub Pages](https://pages.github.com/) 会自动完成此操作，并且已知运行良好。

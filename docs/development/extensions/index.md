@@ -1,42 +1,41 @@
 ---
-hide_table_of_contents: true
+title: 介绍自定义扩展
 ---
 
-# Introduction to custom extensions
+# 介绍自定义扩展
 
-Custom extensions are a way for you to add new blocks to TurboWarp using JavaScript.
+自定义扩展是一种通过使用 JavaScript 在 TurboWarp 中添加新积木的方法。
 
-In this tutorial, we will describe how to build custom extensions. The pages can be navigated using the sidebar or links at the bottom of each page. We assume that you read each page in full and do the exercises listed (if any) before going to the next page.
+在本教程中，我们将介绍如何创建一个自定义扩展。这些页面可以通过侧边栏或每页底部的链接进行导航。我们假设您会完整阅读每个页面，并在进入下一页之前完成列出的练习（如果有）。
 
-:::info
-**We just rewrote this entire tutorial from the ground up.**
+!!! info "信息"
+    **我们刚刚彻底重写了这份完整的教程。**
 
-It uses a completely different structure and style. We hope it's easier to follow. There's a good chance there are some errors and omissions in this tutorial. [Let me know what you think](https://scratch.mit.edu/users/GarboMuffin/#comments). Thanks!
-:::
+    它采用了完全不同的结构和风格，我们希望这样会更易于理解。不过，这个教程仍可能存在一些错误和遗漏之处。[请告诉我您的看法](https://scratch.mit.edu/users/GarboMuffin/#comments)，谢谢！
 
-When people refer to "extensions", there are a few things they could be referring to:
+当人们提到“扩展”时，他们所指的可能有以下几种情况：
 
-| |Can access Scratch internals|Can be loaded by URL|
+| |能够访问 Scratch 内部结构|能够通过 URL 加载 |
 |:-:|:-:|:-:|
-|Core extensions (pen, translate, etc.)|✅|❌|
-|Sandboxed custom extensions|❌|✅|
-|Unsandboxed custom extensions|✅|✅|
+|原版核心扩展（画笔、翻译等）|✅|❌|
+|沙盒·自定义扩展|❌|✅|
+|非沙盒·自定义扩展|✅|✅|
 
-The documentation in these segments refers only to custom extensions. While core extensions share many fundamentals, the process of developing them is significantly different. See [getting started](../getting-started) as a starting point for building core extensions.
+这些部分中的文档仅涉及自定义扩展。虽然核心扩展有许多共同的特性，但开发它们的过程却大不相同。请参考[快速入门](../getting-started.md)作为构建核心扩展的起点。
 
-We will discuss the difference between sandboxed and unsandboxed extensions at [a later time](./unsandboxed).
+我们将[在稍后](./unsandboxed.md)讨论沙盒扩展与非沙盒扩展之间的区别。
 
-## Compatibility
+## 兼容性
 
-Custom extensions are not compatible with Scratch. Projects made using custom extensions cannot be uploaded to the Scratch website. They can, however, be packaged using the [TurboWarp Packager](https://packager.turbowarp.org/).
+自定义扩展与 Scratch 不兼容，使用自定义扩展的作品无法上传至 Scratch 网站。不过，这些作品可以通过 [TurboWarp 打包器](https://packager.turbowarp.org/) 进行打包。
 
-## Prerequisites
+## 预备知识
 
-Custom extension development requires knowledge of writing JavaScript. If you aren't familiar with JavaScript, please learn it first. Your favorite search engine can help you find places to learn. If you don't know things like the difference between `"1"` and `1`, developing extensions will be very difficult. As volunteers, we don't have a lot of time to spend helping you learn JavaScript -- sorry.
+自定义扩展的开发需要具备编写 JavaScript 的知识。如果您还不会 JavaScript，请先学习它。您最常用的搜索引擎可以帮助您找到学习的相关资源。如果您不了解诸如`“1”`和 `1` 之间的区别这类内容，那么开发扩展程序将会非常困难。作为志愿者，我们没有太多时间来帮助您学习 JavaScript —— 为此，我们感到抱歉。
 
-Extensions can be developed using either the website or desktop app.
+扩展可以通过网站或桌面应用来开发。
 
-We assume that you have access to the developer tools built in to your browser or the desktop app. Typically this is accessible through right click > inspect element. In the desktop app, it can be shown with Ctrl+Shift+I (Option+Command+I on macOS). Writing JavaScript without access to the developer tools is extremely painful and not something we can provide help for.
+我们假定您会用浏览器或桌面应用内置的开发者工具。通常，可以通过右键点击 > 检查元素来打开该界面。在桌面应用中，可以通过按 Ctrl+Shift+I（在 macOS 系统上为 Option+Command+I）来打开该界面。如果无法借助开发者来编写 JavaScript 代码，那将会非常麻烦，我们也无法提供帮助。
 
 ## Tutorial structure
 

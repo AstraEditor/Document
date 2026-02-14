@@ -1,10 +1,9 @@
 ---
-slug: /donate
-hide_table_of_contents: true
+title: 赞助
 ---
 
-# Donations
+# 赞助
 
-TurboWarp stopped accepting donations in July 2025 due to a lack of time availability and to avoid a perceived conflict of interest with my employer.
+TurboWarp 于 2025 年 7 月关闭了赞助通道，原因是当时没有足够的时间资源，并且为了避免与我的雇主产生可能被视为利益冲突的情况。
 
-Instead, please donate to and volunteer at charity organizations in your local community. They need your support far more than I do. Make your community a better place.
+相反，您应该向您所在社区的慈善组织捐款并参与志愿服务。他们比我更需要您的支持。让您的社区变得更加美好吧。
