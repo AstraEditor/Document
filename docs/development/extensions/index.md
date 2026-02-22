@@ -31,17 +31,17 @@ title: 介绍自定义扩展
 
 ## 预备知识
 
-自定义扩展的开发需要具备编写 JavaScript 的知识。如果您还不会 JavaScript，请先学习它。您最常用的搜索引擎可以帮助您找到学习的相关资源。如果您不了解诸如`“1”`和 `1` 之间的区别这类内容，那么开发扩展程序将会非常困难。作为志愿者，我们没有太多时间来帮助您学习 JavaScript —— 为此，我们感到抱歉。
+自定义扩展的开发需要具备编写 JavaScript 的知识。如果您还不会 JavaScript，请先学习它。您最常用的搜索引擎可以帮助您找到学习的相关资源。如果您不了解诸如`“1”`和 `1` 之间的区别这类内容，那么开发扩展将会非常困难。作为志愿者，我们没有太多时间来帮助您学习 JavaScript —— 为此，我们感到抱歉。
 
 扩展可以通过网站或桌面应用来开发。
 
 我们假定您会用浏览器或桌面应用内置的开发者工具。通常，可以通过右键点击 > 检查元素来打开该界面。在桌面应用中，可以通过按 Ctrl+Shift+I（在 macOS 系统上为 Option+Command+I）来打开该界面。如果无法借助开发者来编写 JavaScript 代码，那将会非常麻烦，我们也无法提供帮助。
 
-## Tutorial structure
+## 教程结构
 
-This tutorial is follows a fundamentals-up approach. We're going to start with the most basic extensions imaginable that are effectively useless and gradually build up to things that are more useful.
+本教程采用的是从基础概念入手的模式。我们将从理论上最简单的、但实际上毫无用处的扩展功能开始讲起，然后过渡到真正有用的功能。
 
-We know that some of you will be eager to start sharing your extensions around, but **we ask that you read through this whole tutorial before publishing your extensions or submitting them to us** so that the extensions you share are actually useful.
+我们知道，你们当中有些人已经迫不及待地想要分享自己的扩展。但在此我们恳请各位在发布扩展或将其提交给编辑器扩展库之前，先完整阅读本教程，这样所分享的扩展才能真正有用。
 
 ## Prepare a development environment
 
