@@ -8,34 +8,15 @@ title: 嵌入
     这个页面是关于[TurboWarp 打包器](https://turbowarp.org/)的。如果你只想知道如何嵌入 Scratch 作品到网站，查看[另一个嵌入页面](/website/embedding/).
 
 
-You can embed the output of the TurboWarp Packager into another website:
+你可以将 TurboWarp 打包器输出的结果嵌入到别的网站：
 
 ```html
-<iframe src="path_to_project.html" width="480" height="360" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<iframe src="项目的路径.html" width="480" height="360" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
 ```
 
-Depending on the environment you used, where you stored the project, and what you named it, the `src` attribute will vary.
+根据你使用的环境、存储项目的位置以及你是咋命名的，`src` 的属性会有不同。
 
- - If you used "Plain HTML", it's just the path to the HTML file.
- - If you used "Zip", it's the path to the file `index.html` contained within the extracted zip.
+ - 如果你是用 “HTML 文件”（单个），你只需要填入HTML文件的路径。
+ - 如果你是用 “Zip 压缩包”，则需要解压zip并选择 `index.html`文件的路径。
 
-If you have controls enabled, add 48 to the value of `height` to avoid the stage getting shrunk.
-
-# Embedding the packager
-
-:::info
-This page is about the [TurboWarp Packager](https://turbowarp.org/). If you just want an easy way to embed a Scratch project into a website, see [the other embedding page](/embedding).
-:::
-
-You can embed the output of the TurboWarp Packager into another website:
-
-```html
-<iframe src="path_to_project.html" width="480" height="360" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
-```
-
-Depending on the environment you used, where you stored the project, and what you named it, the `src` attribute will vary.
-
- - If you used "Plain HTML", it's just the path to the HTML file.
- - If you used "Zip", it's the path to the file `index.html` contained within the extracted zip.
-
-If you have controls enabled, add 48 to the value of `height` to avoid the stage getting shrunk.
+如果你启用了控制按钮（开始 暂停 终止 全屏那几个），给`height`加上48来避免舞台错误的缩小。

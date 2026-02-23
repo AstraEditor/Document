@@ -3,68 +3,67 @@ slug: /packager/special-cloud-behaviors
 hide_table_of_contents: true
 ---
 
-# Special cloud behaviors
+# 特殊的云变量
 
-:::info
-This page is about the [TurboWarp Packager](https://turbowarp.org/).
-:::
+!!! info "信息"
+    这个页面是关于 [TurboWarp 打包起](https://turbowarp.org/)的。
 
-The disabled-by-default "Special cloud behaviors" option changes the behavior of specifically named cloud variables to unlock new compatibilities for your project. This is based on a [similar feature in HTMLifier](https://github.com/SheepTester/htmlifier/wiki/Special-cloud-behaviours). This feature can be enabled in the "Cloud variables" section.
+默认禁用的“特殊的云变量”设置会更改特定命名的云变量的行为来给你的项目解锁新的兼容性。这是基于[HTMLifier 中的类似功能](https://github.com/SheepTester/htmlifier/wiki/Special-cloud-behaviours)，该功能可以在“云变量”部分启用。
 
-To make these, just create a cloud variable as you normally would but give them the specific name found below. For example, to use the `☁ url` variable, create a variable named `url` and mark it as a cloud variable.
+要创建这些，只需像平常一样创建一个云变量，但给它赋予下面指定的特定名称。例如，要使用 `☁ url` 变量，就创建一个名为 `url` 的变量并将其标记为云变量。
 
-Enabling special cloud behaviors will override any other settings for these variables, so a variable like `☁ username` will never be stored locally or synced with other users.
+启用特殊云行为将覆盖这些变量的任何其他设置，因此像 `☁ username` 这样的变量将永远不会在本地存储或与其他用户同步。
 
 ## ☁ url {#url}
 
-The value of `☁ url` will be set to the page's current URL. Changing the value of `☁ url` does nothing.
+`☁ url` 变量会设为页面的链接，改变这个变量啥用没有。
 
 ## ☁ redirect {#redirect}
 
-When the value of `☁ redirect` is set to a URL, the current tab will navigate to that URL.
+当 `☁ redirect` 设为一个链接，当前标签页将跳转到到这个 URL。
 
 ## ☁ open link {#open-link}
 
-When the value of `☁ open link` is set to a URL, the project will attempt to open a new tab with that URL open. Note that this isn't always reliable due to the popup blockers built in to most browsers.
+当`☁ open link` 设为一个链接，项目将尝试用该URL打开一个新标签页。请注意，由于大多数浏览器内置了弹窗拦截器，这并不总是可靠的。
 
 ## ☁ username {#username}
 
-When the value of `☁ username` is changed, the value of the `username` block in the sensing category will change.
+当 `☁ username` 修改时, 积木区中侦测类的 `用户名` 积木的值将会改变。
 
 ## ☁ pasted {#pasted}
 
-When the user pastes some text onto the page using a shortcut like ctrl+v, the text is stored in `☁ pasted`.
+当用户使用像 Ctrl+V 这样的快捷键将文本粘贴到页面上时，文本会存储在 `☁ pasted` 中。
 
 ## ☁ set clipboard {#set-clipboard}
 
-When the value of `☁ set clipboard` is changed, the page will try to store the text in the user's clipboard. This might not always work.
+当`☁ set clipboard`的值被更改时，页面将尝试将文本存储到用户的剪贴板中。这可能并不总是有效。
 
 ## ☁ room id {#room-id}
 
-When the value of `☁ room id` is changed, the project ID used for syncronizing cloud variables is changed. For example, if the the project's original ID is 1234 and `☁ room id` is set to `xyz`, the new project ID will be `1234-xyz`. To reset the project ID to the original ID, set the value of `☁ room id` to an empty string.
+当 `☁ room id` 的值改变时，用于同步云变量的项目 ID 也会随之改变。例如，如果项目的原始 ID 是 1234，并且 `☁ room id` 被设置为 `xyz`，那么新的项目 ID 将是 `1234-xyz`。要将项目 ID 重置为原始 ID，请将 `☁ room id` 的值设置为空字符串。
 
-This can be useful as a way to add a server selector to cloud variable projects without having to create a bunch of extra variables. Only people with the same room ID will have variables synced between them. It could take a couple seconds for cloud variables to begin working again as it has to reconnect to the cloud variable server.
+这对于为云变量项目添加服务器选择器来说非常有用，无需创建一堆额外的变量。只有拥有相同room id 的人，他们之间的变量才会同步。重新连接到云变量服务器可能需要几秒钟的时间，云变量才能再次开始工作。
 
-The room ID does not affect locally stored cloud variables.
+room id 不影响本地存储的云变量。
 
 ## ☁ eval {#eval}
 
-:::warning
-This option requires "Unsafe special cloud behaviors" to be enabled.
+!!! warning "注意啦"
+    此选项需要启用“不安全的特殊云行为”。
 
-Unsafe cloud behaviors allows the packaged project to execute arbitrary code outside of the "sandbox" that projects are typically executed in. Depending on the environment you're packaging for, this grants projects full control over your computer, including the ability to install viruses.
+    不安全的云行为允许打包后的项目在通常执行项目的“沙盒”之外执行任意代码。根据您打包的目标环境，这将使项目能够完全控制您的计算机，包括安装病毒的能力。
 
-If you do not trust the project you're packaging or don't make use of this feature, please turn off this option.
-:::
+    如果您不信任正在打包的项目，或者不使用此功能，请关闭此选项。
 
-When the value of `☁ eval` is changed, its value will be evaluated as JavaScript.
 
-If the JavaScript is successfully evaluated, its output will be stored in `☁ eval output`.
+当 `☁ eval` 的值改变时，它的值将被作为 JavaScript 代码来执行。
 
-If there was an error evaluating the JavaScript, the error will be stored in `☁ eval error`.
+如果 JavaScript 成功执行，其输出将存储在 `☁ eval output` 中。
 
-If the JavaScript returns a [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), it will store the resolved value in `☁ eval output` if the promise resolves, or the error in `☁ eval error` if it rejects. Note that setting `☁ eval` is always an instant process, so the output variables may not update immediately.
+如果执行 JavaScript 时出错，错误信息将存储在 `☁ eval error` 中。
 
-## Further information and discussion {#further-information}
+如果 JavaScript 返回一个 [Promise](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，那么当这个 promise 成功时，其解决的值会被存入 `☁ eval output`；如果 promise 失败，错误信息会被存入 `☁ eval error`。请注意，设置 `☁ eval` 总是一个瞬时过程，因此输出变量可能不会立即更新。
 
-See https://github.com/TurboWarp/packager/issues/48
+## 更多信息和讨论 {#further-information}
+
+请参阅 https://github.com/TurboWarp/packager/issues/48
