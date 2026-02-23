@@ -36,6 +36,7 @@ nav:
     - 赞助: website/donate.md
   - 特色:
     - features/index.md
+    - README: features/readme.md
   - 打包:
     - packager/index.md
     - 嵌入: packager/embedding.md
