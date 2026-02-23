@@ -6,9 +6,9 @@ hide_table_of_contents: true
 # 特殊的云变量
 
 !!! info "信息"
-    这个页面是关于 [TurboWarp 打包起](https://turbowarp.org/)的。
+    这个页面是关于 [TurboWarp 打包器](https://turbowarp.org/)的。
 
-默认禁用的“特殊的云变量”设置会更改特定命名的云变量的行为来给你的项目解锁新的兼容性。这是基于[HTMLifier 中的类似功能](https://github.com/SheepTester/htmlifier/wiki/Special-cloud-behaviours)，该功能可以在“云变量”部分启用。
+默认禁用的“特殊的云变量”设置会更改特定命名的云变量的行为，来给你的项目解锁新的兼容性。这是基于[HTMLifier 中的类似功能](https://github.com/SheepTester/htmlifier/wiki/Special-cloud-behaviours)，该功能可以在“云变量”部分启用。
 
 要创建这些，只需像平常一样创建一个云变量，但给它赋予下面指定的特定名称。例如，要使用 `☁ url` 变量，就创建一个名为 `url` 的变量并将其标记为云变量。
 
