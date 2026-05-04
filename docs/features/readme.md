@@ -1,6 +1,10 @@
 # README
 
 README 功能可以以`Markdown`形式渲染特定的注释，让其它人了解你的项目。
+
+!!! info "信息"
+    `AstraEditor 1.2.0`可以直接在工作区右键快速创建一个README啦！![readme](./readme/menu.png)
+
 !!! warning "注意啦"
     每个README仅会在自己的角色/舞台内显示，而不互通
 
